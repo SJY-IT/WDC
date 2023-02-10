@@ -1,0 +1,91 @@
+mysql> SHOW TABLES;
++-----------------------+
+| Tables_in_group46ver2 |
++-----------------------+
+| admin_profile         |
+| hotspot               |
+| manager_profile       |
+| user_profile          |
+| venue                 |
+| venue_visits          |
++-----------------------+
+6 rows in set (0.00 sec)
+
+mysql>
+mysql> DESC user_profile;
++----------------+--------------+------+-----+---------+----------------+
+| Field          | Type         | Null | Key | Default | Extra          |
++----------------+--------------+------+-----+---------+----------------+
+| user_id        | int          | NO   | PRI | NULL    | auto_increment |
+| firstname      | varchar(255) | NO   |     | NULL    |                |
+| lastname       | varchar(255) | NO   |     | NULL    |                |
+| username       | varchar(255) | NO   |     | NULL    |                |
+| password       | varchar(255) | NO   |     | NULL    |                |
+| address        | varchar(255) | NO   |     | NULL    |                |
+| contact_number | varchar(30)  | YES  |     | NULL    |                |
+| email_address  | varchar(255) | YES  |     | NULL    |                |
++----------------+--------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> DESC admin_profile;
++----------------+--------------+------+-----+---------+----------------+
+| Field          | Type         | Null | Key | Default | Extra          |
++----------------+--------------+------+-----+---------+----------------+
+| admin_id       | int          | NO   | PRI | NULL    | auto_increment |
+| firstname      | varchar(255) | NO   |     | NULL    |                |
+| lastname       | varchar(255) | NO   |     | NULL    |                |
+| username       | varchar(255) | NO   |     | NULL    |                |
+| password       | varchar(255) | NO   |     | NULL    |                |
+| address        | varchar(255) | NO   |     | NULL    |                |
+| contact_number | varchar(30)  | YES  |     | NULL    |                |
+| email_address  | varchar(255) | YES  |     | NULL    |                |
++----------------+--------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> DESC manager_profile;
++----------------+--------------+------+-----+---------+----------------+
+| Field          | Type         | Null | Key | Default | Extra          |
++----------------+--------------+------+-----+---------+----------------+
+| manager_id     | int          | NO   | PRI | NULL    | auto_increment |
+| firstname      | varchar(255) | NO   |     | NULL    |                |
+| lastname       | varchar(255) | NO   |     | NULL    |                |
+| username       | varchar(255) | NO   |     | NULL    |                |
+| password       | varchar(255) | NO   |     | NULL    |                |
+| address        | varchar(255) | NO   |     | NULL    |                |
+| contact_number | varchar(30)  | YES  |     | NULL    |                |
+| email_address  | varchar(255) | YES  |     | NULL    |                |
+| venue_id       | int          | YES  | MUL | NULL    |                |
++----------------+--------------+------+-----+---------+----------------+
+9 rows in set (0.00 sec)
+
+mysql> DESC venue;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| venue_id   | int          | NO   | PRI | NULL    | auto_increment |
+| venue_name | varchar(255) | NO   |     | NULL    |                |
+| address    | varchar(255) | NO   |     | NULL    |                |
+| capacity   | int          | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> DESC venue_visits;
++------------+----------+------+-----+---------+----------------+
+| Field      | Type     | Null | Key | Default | Extra          |
++------------+----------+------+-----+---------+----------------+
+| visit_id   | int      | NO   | PRI | NULL    | auto_increment |
+| user_id    | int      | YES  | MUL | NULL    |                |
+| visit_date | datetime | NO   |     | NULL    |                |
+| venue_id   | int      | YES  | MUL | NULL    |                |
++------------+----------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> DESC hotspot;
++-----------------+------+------+-----+---------+----------------+
+| Field           | Type | Null | Key | Default | Extra          |
++-----------------+------+------+-----+---------+----------------+
+| hotspot_id      | int  | NO   | PRI | NULL    | auto_increment |
+| infected_people | int  | YES  |     | NULL    |                |
+| venue_id        | int  | YES  | MUL | NULL    |                |
++-----------------+------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)

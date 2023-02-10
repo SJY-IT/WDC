@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Web Project</title>
+  <link rel="stylesheet" href="/stylesheets/stylemain.css">
+  <script src="/javascripts/myProject.js" defer></script>
+</head>
+
+
+
+<body id="App" onload="checkUser()">
+
+<header>
+   <div class = "left">
+
+      <a href = "/healthOfficialMain.html" >
+      Back to main
+      </a>
+
+  </div>
+
+  <div class = "right">
+    <a href = "https://gmail.com" target="_blank">
+    Gmail
+    </a>
+
+  <a href = "/index.html" onclick="logout()">
+    Sign Out
+  </a>
+  </div>
+
+</header>
+<div class="wrapper fadeInDown">
+
+      <div id="formContentTable">
+
+        <div class="fadeIn first">
+          <img src="/images/usericon.png" id="icon" alt="User Icon" />
+        </div>
+
+    <form action="/check.html">
+      <label for="Code">Enter User ID of desired user:</label><br>
+  <input type="text" id="Code" name="Code" value="" placeholder="..."><br>
+  <input type="submit" value="Submit">
+    </form>
+
+
+        <h2>Check-In History</h2>
+      <br><button onclick="loadcheckinhistory()">View last 10 Check In history</button>
+      <button onclick="loadcheckinhistoryfull()">View entire Check In history</button>
+        <table id="checkinhistory">
+            <tr>
+              <th>Name of Venue</th>
+              <th>Venue Code</th>
+              <th>Date-Time of Visit</th>
+            </tr>
+        </table>
+
+
+
+      </div>
+
+
+  </div>
+<body>
+
+</html>

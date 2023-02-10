@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Web Project</title>
+  <link rel="stylesheet" href="/stylesheets/stylemain.css">
+  <script src="/javascripts/myProject.js" defer></script>
+</head>
+
+
+
+<body onload="checkUser()">
+
+<header>
+   <div class = "left">
+
+      <a href = "/main.html">
+      Back to main
+      </a>
+
+  </div>
+
+  <div class = "right">
+    <a href = "https://gmail.com">
+    Gmail
+    </a>
+
+  <a href = "/index.html" onclick="logout()">
+    Sign Out
+  </a>
+  </div>
+
+</header>
+<div class="wrapper fadeInDown">
+
+      <div id="formContentMain">
+
+      <h1>Check-In page</h1>
+
+        <div class="fadeIn first">
+          <img src="/images/Check_in.png" id="icon" alt="User Icon" />
+        </div>
+
+      <h2>Check in via code or location</h2>
+
+
+
+<form action="/check.html">
+  <label for="Code">Enter Code:</label><br>
+  <input type="text" id="Code" name="Code" value="" placeholder="..."><br>
+  <input type="submit" value="Submit">
+</form>
+
+      <p>Click the button to get your location (please allow this function in your browser)</p>
+
+      <button onclick="getLocation()">Get Your Location</button>
+      <button onclick="convertLocation()">Convert Your Location to Address</button>
+      <p id="location">Your location is loading...Please click the above button to get your location.</p>
+      <button onclick="checkVenuePresence()">Check In to Venue</button>
+
+      <div id="addVenueLocation" style="display: none;">
+        <input type="text" id="venueName" class="fadeIn second" value="" name="venueName" placeholder="Type in Name of the Venue">
+        <input type="text" id="venueAddress" class="fadeIn third" value="" name="venueAddress" placeholder="Type in Address of the Venue">
+        <input type="text" id="venueCapacity" class="fadeIn second" value="" name="venueCapacity" placeholder="Type in Capacity of the Venue">
+        <input type="submit" class="fadeIn fourth" value="Submit" onclick="addVenueLocation()">
+    </div>
+
+      </div>
+
+
+  </div>
+<body>
+
+</html>

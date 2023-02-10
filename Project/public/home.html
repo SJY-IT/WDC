@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Web Project</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/stylemain.css">
+
+    <script src="/javascripts/myProject.js" defer></script>
+</head>
+
+<body onload="load_hotspot_list()">
+      <div class="wrapper fadeInDown">
+         <header>
+   <div class = "left">
+
+      <a href = "/main.html" >
+      Back to main
+      </a>
+
+  </div>
+
+</header>
+
+    <div>
+        <div>
+            <h1> COVID Tracing Website </h1>
+        </div>
+    </div>
+
+    <div id='map' style='width: 800px; height: 600px;'></div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic2xhY2tvMDMyMCIsImEiOiJja3BzN2Z0MTAwNHBuMnZzNDh2NGkxZzhjIn0.P7VslKjVKdUJI5F5Z1Yobw';
+        var map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            center: [138.6007, -34.9285], // starting position [lng, lat] , Adelaide 34.9285° S, 138.6007° E
+            zoom: 9 // starting zoom
+        });
+    </script>
+
+    <div>
+        <h2>Hotspot List</h2>
+        <ul id="hotspot_list">
+            <!-- List will be created by JS function -->
+        </ul>
+    </div>
+
+
+
+</body>
+
+</html>

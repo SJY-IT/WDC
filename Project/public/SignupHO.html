@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Web Project</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/stylemain.css">
+  <script src="/javascripts/myProject.js" defer></script>
+</head>
+
+<body id="App" onload="checkIndexUser()">
+<header>
+   <div class = "left">
+
+      <a href = "/healthOfficialMain.html" >
+      Back to main
+      </a>
+
+  </div>
+
+  <div class = "right">
+    <a href = "https://gmail.com" target="_blank">
+    Gmail
+    </a>
+
+  <a href = "/index.html" onclick="logout()">
+    Sign Out
+  </a>
+  </div>
+
+</header>
+  <div class="wrapper fadeInDown">
+  <!-- id or class that contains 'form' should be re-named to something else maybe? -->
+  <div id="formContent">
+
+    <div id="signUpBox">
+        <h1>
+            Sign up Fellow Health Official
+        </h1>
+        <input type="text" id="signUpId" class="fadeIn second" value="" name="signUpId" placeholder="User ID">
+        <input type="password" id="signUpPwd" class="fadeIn third" value="" name="signUpPwd" placeholder="Password">
+        <input type="text" id="signUpFName" class="fadeIn second" value="" name="signUpFName" placeholder="First Name">
+        <input type="text" id="signUpLName" class="fadeIn second" value="" name="signUpLName" placeholder="Last Name">
+        <input type="text" id="signUpAddress" class="fadeIn second" value="" name="signUpAddress" placeholder="Address">
+        <input type="text" id="signUpContactNumber" class="fadeIn second" value="" name="signUpContactNumber" placeholder="Contact Number">
+        <input type="text" id="signUpEmailAddress" class="fadeIn second" value="" name="signUpEmailAddress" placeholder="Email Address">
+        <input type="submit" class="fadeIn fourth" value="Sign Up" onclick="SignUp()">
+    </div>
+
+  </div>
+</div>
+
+
+</body>
+
+</html>

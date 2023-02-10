@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Web Project</title>
+  <link rel="stylesheet" href="/stylesheets/stylemain.css">
+  <script src="/javascripts/myProject.js" defer></script>
+</head>
+
+
+
+<body onload="checkUser()">
+
+<header>
+   <div class = "left">
+
+      <a href = "/main.html" onclick="checkUser()">
+      Back to main
+      </a>
+
+  </div>
+
+  <div class = "right">
+    <a href = "https://gmail.com" target="_blank">
+    Gmail
+    </a>
+
+  <a href = "/index.html" onclick="logout()">
+    Sign Out
+  </a>
+  </div>
+
+</header>
+<div class="wrapper fadeInDown">
+
+      <div id="formContentTable">
+
+        <div class="fadeIn first">
+          <img src="/images/History.png" id="icon" alt="User Icon" />
+        </div>
+
+
+        <h2>Check-In History</h2>
+      <br><button onclick="loadcheckinhistory()">View my last 10 Check In history</button>
+      <button onclick="loadcheckinhistoryfull()">View my entire Check In history</button>
+        <table id="checkinhistory">
+            <tr>
+              <th>Name of Venue</th>
+              <th>Venue Code</th>
+              <th>Date-Time of Visit</th>
+            </tr>
+        </table>
+
+
+
+      </div>
+
+
+  </div>
+<body>
+
+</html>

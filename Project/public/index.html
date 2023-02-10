@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Web Project</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/stylemain.css">
+  <script src="/javascripts/myProject.js" defer></script>
+</head>
+
+<body id="App" onload="checkIndexUser()">
+
+  <div class="wrapper fadeInDown">
+  <!-- id or class that contains 'form' should be re-named to something else maybe? -->
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active" onclick="show_logInBox()"> Sign In </h2>
+    <h2 class="inactive underlineHover" onclick="show_signUpBox()">Sign Up </h2>
+
+      <!-- Log In Box -->
+      <div id="logInBox">
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <img src="/images/usericon.png" id="icon" alt="User Icon" />
+        </div>
+
+        <!-- logIn Form -->
+        <!-- Not using 'Form' because we'd rather want to use AJAX -->
+        <input type="text" id="logInId" class="fadeIn second" value="" name="logInId" placeholder="User ID">
+        <input type="password" id="logInPwd" class="fadeIn third" value="" name="logInPwd" placeholder="Password">
+        <input type="button" id = "logInType" class ="fadeIn second" value = "Log In for Health Official" onclick="logInHO()">
+        <input type="button" id = "logInType" class ="fadeIn second" value = "Log In for Civilian" onclick="logIn()">
+        <input type="button" id = "logInType" class ="fadeIn second" value = "Log In for Venue Manager" onclick="logInVM()">
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+          <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+    </div>
+
+    <!-- Sign Up Box-->
+    <div id="signUpBox" style="display: none;">
+        <input type="text" id="signUpId" class="fadeIn second" value="" name="signUpId" placeholder="User ID">
+        <input type="password" id="signUpPwd" class="fadeIn third" value="" name="signUpPwd" placeholder="Password">
+        <input type="text" id="signUpFName" class="fadeIn second" value="" name="signUpFName" placeholder="First Name">
+        <input type="text" id="signUpLName" class="fadeIn second" value="" name="signUpLName" placeholder="Last Name">
+        <input type="text" id="signUpAddress" class="fadeIn second" value="" name="signUpAddress" placeholder="Address">
+        <input type="text" id="signUpContactNumber" class="fadeIn second" value="" name="signUpContactNumber" placeholder="Contact Number">
+        <input type="text" id="signUpEmailAddress" class="fadeIn second" value="" name="signUpEmailAddress" placeholder="Email Address">
+
+        <input type="submit" class="fadeIn fourth" value="Sign Up" onclick="SignUp()">
+    </div>
+
+  </div>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Web Project</title>
+  <link rel="stylesheet" href="/stylesheets/stylemain.css">
+  <script src="/javascripts/myProject.js" defer></script>
+</head>
+
+<body id="App" onload="checkUser()">
+  <header>
+   <div class = "left">
+
+      <a href="/account.html" onclick="checkUser()">
+      Account
+      </a>
+      <a href = "/about.html">
+      About
+      </a>
+
+  </div>
+  <div class = "right" target="_blank">
+    <a href = "https://gmail.com">
+    Gmail
+    </a>
+
+  <a href="/" onclick="logout()">Sign Out</a>
+  </div>
+
+</header>
+
+<div id = "Body_excluding_header">
+
+  <div class="wrapper fadeInDown">
+
+      <div id="formContentMain">
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <img src="/images/Map.png" id="icon" alt="User Icon" />
+        </div>
+
+        <form action="/home.html">
+            <input type="submit" value="Covid Hotspot Map" />
+        </form>
+
+
+      </div>
+
+
+  </div>
+
+  <div class="wrapper fadeInDown">
+
+      <div id="formContentMain">
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <img src="/images/Check_in.png" id="icon" alt="User Icon" />
+        </div>
+
+        <form action="/check.html">
+            <input type="submit" value="Check-In to Location" />
+        </form>
+
+
+      </div>
+
+
+  </div>
+
+    <div class="wrapper fadeInDown">
+
+      <div id="formContentMain">
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <img src="/images/History.png" id="icon" alt="User Icon" />
+        </div>
+
+        <form action="/check-in-history.html">
+            <input type="submit" value="Check-In History" />
+        </form>
+
+      </div>
+
+
+  </div>
+  </div>
+<body>
+
+</html>

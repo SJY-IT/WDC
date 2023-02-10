@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Web Project</title>
+  <link rel="stylesheet" href="/stylesheets/stylemain.css">
+  <script src="/javascripts/myProject.js" defer></script>
+</head>
+
+
+
+<body id="App" onload="checkUser()">
+  <header>
+   <div class = "left">
+
+      <a href = "/accountManager.html">
+      Account
+      </a>
+      <a href = "/aboutManager.html">
+      About
+      </a>
+
+  </div>
+
+  <div class = "right">
+    <a href = "https://gmail.com">
+    Gmail
+    </a>
+
+  <a href = "/index.html">
+    Sign Out
+  </a>
+  </div>
+
+</header>
+
+<div id = "Body_excluding_header">
+
+  <div class="wrapper fadeInDown">
+
+      <div id="formContentMain">
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <img src="/images/Venue.png" id="icon" alt="User Icon" />
+        </div>
+
+        <form action="/Venue.html">
+            <input type="submit" value="Manage Venue Information" />
+        </form>
+
+
+      </div>
+
+
+  </div>
+
+    <div class="wrapper fadeInDown">
+
+      <div id="formContentMain">
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <img src="/images/Capacity.png" id="icon" alt="User Icon" />
+        </div>
+
+        <form action="/VenueCheckIn.html">
+            <input type="submit" value="View Venue Activity" />
+        </form>
+
+
+      </div>
+
+
+  </div>
+
+
+<body>
+
+</html>
